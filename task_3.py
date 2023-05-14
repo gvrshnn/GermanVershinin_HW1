@@ -14,10 +14,16 @@ if operation in ('+-/*modpowdiv'):
         else:
             print(first_number / second_number)
     elif operation == 'mod':
-        print(first_number % second_number)
+        if second_number == 0:
+            print('Division by 0!')
+        else:
+            print(first_number % second_number)
     elif operation == 'pow':
         print(first_number ** second_number)
     elif operation == 'div':
-        print(first_number // second_number)
+        if second_number == 0:
+            print('Division by 0!')
+        else:
+            print(first_number // second_number)
 else:
     print('Supported operations: +, -, /, *, mod, pow, div')
